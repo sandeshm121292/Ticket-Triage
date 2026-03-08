@@ -5,11 +5,7 @@ def summarize_ticket(ticket: dict) -> dict:
     Input: {"id": str, "text": str}
     Output: {"ticket_id": str, "summary": str, "keywords": list[str]}
     """
-    # BUGS:
-    # - crashes if ticket is None / missing keys
-    # - keywords returns a string not list
-    # - summary can exceed 80 chars
-    # guard against bad inputs
+  
     if not isinstance(ticket, dict):
         ticket = {}
 
